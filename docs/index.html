@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      ol li {
+      ol li:not(:last-child) {
         margin: 24px 0px !important;
       }
     </style>
@@ -44,14 +44,39 @@
             imports: { POC },
             pages: [
               {
-                path: "/", // The path where the page can be accessed
-                title: "Introduction", // The page title
-                src: "introduction.md" // Path to the Markdown document
+                path: "/",
+                title: "Introduction",
+                src: "introduction.md"
               },
               {
-                path: "/getting-started", // The path where the page can be accessed
-                title: "Getting Started", // The page title
-                src: "Getting-Started.md" // Path to the Markdown document
+                path: "/getting-started",
+                title: "Getting Started",
+                src: "getting-started.md"
+              },
+              {
+                title: "Functions",
+                pages: [
+                  {
+                    path: "/functions",
+                    title: "Getting Started",
+                    src: "functions/index.md"
+                  }
+                ]
+              },
+              {
+                title: "Components",
+                pages: [
+                  {
+                    path: "/components",
+                    title: "Getting Started",
+                    src: "components/index.md"
+                  },
+                  {
+                    path: "/components/button",
+                    title: "Button",
+                    src: "components/button.md"
+                  }
+                ]
               }
             ]
           },
