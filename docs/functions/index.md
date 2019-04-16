@@ -1,5 +1,3 @@
-# Functions
-
 ## What is a function?
 
 We've extracted common iqmetrix functionality into a set of functions that can be imported and reused wherever they're needed. We've based the design of these functions around the principles of [SOA in the browser](https://medium.com/canopy-tax/a-case-for-soa-in-the-browser-f777a9f139b2). We have a few simple rules that define what a function in this repository looks like:

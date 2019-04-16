@@ -36,8 +36,10 @@
         Catalog.render(
           {
             title: "Hub Docs",
+            logoSrc:
+              "https://www.iqmetrix.com/hubfs/iQmetrix_horizontal_Black.svg",
             theme: {
-              background: "#FEFEFE",
+              background: "#ffffff",
               brandColor: "#3088bf",
               pageHeadingBackground: "#3088bf"
             },
@@ -49,16 +51,16 @@
                 src: "introduction.md"
               },
               {
-                path: "/getting-started",
-                title: "Getting Started",
-                src: "getting-started.md"
+                path: "/setup",
+                title: "Setup",
+                src: "setup.md"
               },
               {
                 title: "Functions",
                 pages: [
                   {
                     path: "/functions",
-                    title: "Getting Started",
+                    title: "Introduction",
                     src: "functions/index.md"
                   }
                 ]
@@ -68,13 +70,28 @@
                 pages: [
                   {
                     path: "/components",
-                    title: "Getting Started",
+                    title: "Introduction",
                     src: "components/index.md"
                   },
                   {
                     path: "/components/button",
                     title: "Button",
                     src: "components/button.md"
+                  }
+                ]
+              },
+              {
+                title: "Design System",
+                pages: [
+                  {
+                    path: "/design-system",
+                    title: "Introduction",
+                    src: "components/index.md"
+                  },
+                  {
+                    path: "/design-system/pallette",
+                    title: "Pallette",
+                    src: "design-system/pallette.md"
                   }
                 ]
               }

@@ -1,5 +1,3 @@
-## Button
-
 ```react
 responsive: true
 ---

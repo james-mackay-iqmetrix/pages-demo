@@ -1,5 +1,3 @@
-# Getting Started
-
 We at the Hub team think [create-react-app](https://github.com/facebook/create-react-app#creating-an-app) (CRA) is a great way to get started, but your team has complete control over how you build your app. For the purposes of this doc, we're going to assume CRA, but the concepts should apply to most applications.
 
 _**All commands are intended to be ran from your application's root directory**_
