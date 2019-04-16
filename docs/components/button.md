@@ -17,5 +17,5 @@ span: 3
 ```react
 responsive: true
 ---
-<POC variant="extreme"/>
+<POC />
 ```
