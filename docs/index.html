@@ -1,34 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Catalog</title>
-</head>
-<body>
-  <div id="catalog" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      ol li {
+        margin: 24px 0px !important;
+      }
+    </style>
+    <title>Hub Docs</title>
+  </head>
+  <body>
+    <div id="catalog"></div>
 
-  <!-- To use the React Specimen you need Babel Standalone -->
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- To use the React Specimen you need Babel Standalone -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/catalog@3/dist/catalog-standalone.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alameda@1.3.0/alameda.min.js"></script>
 
-  <!-- Use the development version to get helpful errors in your console -->
-  <!-- <script src="https://unpkg.com/catalog@3/dist/catalog-standalone.development.js"></script> -->
+    <script>
+      define("react", React);
+      define("react-dom", ReactDOM);
+      require.config({
+        paths: {
+          "@iqmetrix": "https://hub-cdn-int.iqmetrix.net/packages"
+        }
+      });
+    </script>
 
-  <!-- Use the minified production version to get optimal performance -->
-  <script src="https://unpkg.com/catalog@3/dist/catalog-standalone.min.js"></script>
-
-  <script>
-    Catalog.render({
-      title: 'My Catalog',
-      pages: [
-        {
-          path: '/',             // The path where the page can be accessed
-          title: 'Introduction', // The page title
-          src: 'introduction.md'   // Path to the Markdown document
-        },
-        // Other pages …
-      ]
-    }, document.getElementById('catalog'));
-  </script>
-</body>
+    <script type="text/babel">
+      (async () => {
+        const [POC] = await require(["@iqmetrix/poc"]);
+        Catalog.render(
+          {
+            title: "Hub Docs",
+            theme: {
+              background: "#FEFEFE",
+              brandColor: "#3088bf",
+              pageHeadingBackground: "#3088bf"
+            },
+            imports: { POC },
+            pages: [
+              {
+                path: "/", // The path where the page can be accessed
+                title: "Introduction", // The page title
+                src: "introduction.md" // Path to the Markdown document
+              },
+              {
+                path: "/getting-started", // The path where the page can be accessed
+                title: "Getting Started", // The page title
+                src: "Getting-Started.md" // Path to the Markdown document
+              }
+            ]
+          },
+          document.getElementById("catalog")
+        );
+      })();
+    </script>
+  </body>
 </html>
