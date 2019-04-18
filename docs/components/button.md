@@ -2,12 +2,14 @@
 
 ```react
 span: 3
+showSource: true
 ---
 <POC/>
 ```
 
 ```react
 span: 3
+showSource: true
 ---
 <POC variant="extreme"/>
 ```
